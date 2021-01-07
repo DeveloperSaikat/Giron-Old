@@ -40,7 +40,7 @@ export class UserSignupComponent implements OnInit {
       );
     }
     else{
-      this.toastr.error('Please make changes', 'Major Error');
+      this.toastr.error('Please make changes.', 'Major Error');
     }
   }
 
