@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="card login-card col-md-10 offset-md-1">
+    <div class="card-body">
+        <h3>Login</h3><br>
+        <div class="row">
+            <form class="col-md-6" #userLogin="ngForm" (ngSubmit)="login(userLogin)">
+              <div class="form-group">
+                  <input type="text" class="form-control" id="yourUserName" name="yourUserName" placeholder="Enter Username" ngModel required>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="yourUserPassword" name="yourUserPassword" placeholder="Enter Password"  ngModel required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="yourUser2FA" name="yourUser2FA" placeholder="Enter 2FA if applicable"  ngModel>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+            <div class="col-md-6">
+              <div class="domain-img">
+              </div>
+            </div>
+
+          <!--  <div class="col-md-6">
+                <h3>Login</h3>
+                <input id="username" name="username" class="form-control" [(ngModel)]="user.username" type="text" placeholder="Enter Username" required>
+                <input id="password" name="password" class="form-control" [(ngModel)]="user.password" type="password" placeholder="Enter password" required>
+                <input id="token" name="token" class="form-control" [(ngModel)]="user.token2FA" type="text" placeholder="Enter 2FA token if applicable" required>
+                <br><br>
+                <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+            </div>
+            <div class="col-md-6">
+              <div class="domain-img">
+              </div>
+            </div>-->
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+  

@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="card col-md-10 offset-md-1">
+        <div class="card-body">
+            <div class="row">
+                <form class="col-md-6" #createUserForm="ngForm" (ngSubmit)="onSubmit(createUserForm)">
+                    <div class="form-group">
+                      <label for="yourUsername">Username</label>
+                      <input type="text" class="form-control" id="yourUsername" name="yourUsername" [(ngModel)]="userDetails.username" required #usernameField="ngModel" 
+                      minlength="6"  [class.field-error]="createUserForm.submitted && usernameField.invalid">
+                      <div [hidden]="!createUserForm.submitted || usernameField.valid" class="alert alert-danger">
+                          Enter Username Correctly
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="userPassword">Password</label>
+                      <input type="password" class="form-control" id="userPassword" name="userPassword" [(ngModel)]="userDetails.password" required #passwordField="ngModel" 
+                      [class.field-error]="createUserForm.submitted && passwordField.invalid">
+                      <div [hidden]="!createUserForm.submitted || passwordField.valid" class="alert alert-danger">
+                        Enter Password
+                    </div>
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="isAdmin">
+                      <label class="form-check-label" for="isAdmin">Admin?</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+    
+                <div class="col-md-6">
+                   <div class="domain-img">
+                   </div>
+                </div>
+            </div>
+            
+
+
+            <!--<div *ngIf="!notAuthorised" class="alert alert-danger" role="alert">
+                {{errorMessage}}
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="user-header">User Signup</h3>
+                    <input id="username" name="username" class="form-control" [(ngModel)]="userDetails.username" type="text" placeholder="Enter Username" required>
+                    <br>
+                    <input id="password" name="password" class="form-control" [(ngModel)]="userDetails.password" type="password" placeholder="Enter Password" required>
+                    <br>
+                    <div class="row admin-section">
+                        <label class="admin-check" for="admin">Admin?</label>
+                        <input id="isAdmin" name="isAdmin" class="form-control move-left" [(ngModel)]="userDetails.isAdmin" type="checkbox" placeholder="Enter Domain Name" required>
+                        <br>
+                    </div>
+                    <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
+                </div>
+                <div class="col-md-6">
+                    <div class="domain-img">
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>
+
+
+
+  

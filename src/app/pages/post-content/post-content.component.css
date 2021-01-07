@@ -1,0 +1,41 @@
+.card{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.post-details{
+    margin-left: 2%;
+}
+
+.giron-color{
+    color:  rgb(42, 42, 248);
+}
+
+.newSection{
+    animation-duration: .5s;
+    animation-name: slideIn;
+    animation-fill-mode: forwards;
+    transition: transform .5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-200px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@media (max-width: 576px){
+    textarea{
+        margin-bottom: 2%;
+    }
+    .post-details{
+        margin-left: 5%;
+    }
+}

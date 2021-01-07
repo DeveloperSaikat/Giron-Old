@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="card col-md-10 offset-md-1">
+    <div class="card-body">
+      <h3 class="card-title giron-color">{{postDetails.title}}</h3>
+      <div class="row">
+        <p class="post-details"><strong class="giron-color">Domain:</strong>  {{postDetails.domainName}}</p>
+        <p class="post-details"><strong class="giron-color">Owner:</strong>  {{postDetails.username}}</p>
+      </div>
+      <p class="card-text">{{postDetails.body}}</p>
+      <p class="card-text">{{postDetails.createdAt | date:'dd-MMM-yyyy HH:mm'}}</p>
+
+      <form #createUserComment="ngForm" (ngSubmit)="createComment(createUserComment)">
+        <div class="row">
+          <div class="col-md-10">
+            <div class="form-group">
+              <textarea type="text" class="form-control" id="userComment" name="userComment"
+                        [(ngModel)]="postComment.body" rows="3" required></textarea>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+      <!--<div class="col-md-10">
+          <textarea id="body" name="body" class="form-control" [(ngModel)]="postComment.body" rows="3" placeholder="Type Anything" required></textarea>
+      </div>
+      <div class="col-md-2">
+          <button type="button" class="btn btn-primary" (click)="createComment()">Post</button>
+      </div>-->
+      <br><br>
+      <div *ngIf="commentPosted" class="newSection">
+        <h5 class="giron-color"><strong>{{newComment.username}}</strong></h5>
+        <p>{{newComment.body}}</p>
+        <p>{{newComment.createdAt | date:'dd-MMM-yyyy HH:mm'}}</p>
+        <hr>
+      </div>
+      <div *ngFor="let comments of commentDetails">
+        <h5 class="giron-color"><strong>{{comments.username}}</strong></h5>
+        <p>{{comments.body}}</p>
+        <p>{{comments.createdAt | date:'dd-MMM-yyyy HH:mm'}}</p>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>

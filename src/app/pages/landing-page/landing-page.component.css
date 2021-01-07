@@ -1,0 +1,76 @@
+.display-4{
+    font-weight: bold;
+}
+
+.jumbotron{
+    background-color: white;
+    background-image: url(/assets/home-rush.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.content{
+    background-image: url(/assets/home-bg.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.benefit-cards{
+    margin: 2% 2% 10% 2%;
+    width: 15rem;
+}
+
+.first-cards{
+    margin: 2% 2% 0 2%;
+    border: 2px solid rgb(42, 42, 248);
+}
+
+.c-size{
+    width: 50%;
+    margin: 10% 25% 0 25%;
+}
+
+.first-card-text{
+    text-align: center;
+    font-weight: bold;
+}
+
+.main-cards{
+    margin-top: 5%;
+    justify-content: center;
+}
+
+h4{
+    font-weight: 1000;
+    font-size: 2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+}
+
+h3{
+    font-weight: 1000;
+    font-size: 2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+}
+
+.b-size{
+    width: 80%;
+    margin: 5% 10% 0 10%;
+}
+
+.description{
+    margin-top: 10%;
+}
+
+.benefit-cards{
+    width: 18rem;
+    border: none;
+}
+
+.d-size{
+    width: 80%;
+}
+
+.benefit-header{
+    font-weight: bold;
+}

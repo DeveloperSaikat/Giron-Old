@@ -1,0 +1,63 @@
+.jumbotron{
+    background-color: rgb(127, 127, 250);;
+}
+
+.img-card{
+    margin-bottom: 2%;
+}
+
+.domain-head{
+    font-weight: bold;
+}
+
+.domainstats-header{
+    margin-bottom: 10%;
+    font-weight: bold;
+}
+
+.domain-stats{
+    font-size: large;
+}
+
+.content-cards{
+    margin-bottom: 5%;
+}
+
+.posts-cards{
+    margin-bottom: 2%;
+}
+
+.post-buttons-like{
+    background-color: white;
+    color: rgb(42, 42, 248);
+    margin-left: 2%;
+}
+
+.post-buttons-comments{
+    background-color: white;
+    color: rgb(42, 42, 248);
+    margin-left: 2%;
+}
+
+.post-buttons-like:hover{
+    background-color: tomato;
+    color: white;
+    border: tomato;
+}
+
+.post-buttons-comments:hover{
+    background-color: rgb(42, 42, 248);
+    color: white;
+    border: rgb(42, 42, 248);
+}
+
+.liked{
+    background-color: tomato;
+    color: white;
+    border: tomato;
+    margin-left: 2%;
+}
+
+.create-cards{
+    height: 400px;
+}

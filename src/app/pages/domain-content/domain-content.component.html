@@ -1,0 +1,111 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container jumbotron-container">
+    <h1 class="display-6 domain-head">{{name|uppercase}}</h1>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card create-cards">
+        <div class="card-body">
+          <form #createUserPost="ngForm" (ngSubmit)="create(createUserPost)">
+            <div class="form-group">
+              <label for="postTitle">Post Title</label>
+              <input type="text" class="form-control" id="postTitle" name="postTitle" [(ngModel)]="post.title" required>
+            </div>
+            <div class="form-group">
+              <label for="postBody">Post Body</label>
+              <textarea type="text" class="form-control" id="postBody" name="postBody" [(ngModel)]="post.body" rows="6"
+                        required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card img-card create-cards">
+        <img src="../assets/study.png" class="card-img-top" alt="...">
+        <div class="card-body">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <div *ngIf="postSubmitted" class="card posts-cards">
+        <div class="card-body">
+          <a [routerLink]="['/user', newPost.domainName, newPost.id]"><h3
+            style="font-weight: bold;">{{newPost.title}}</h3></a>
+          <p>{{newPost.body}}</p>
+          <p>{{newPost.createdAt | date:'dd-MMM-yyyy HH:mm'}}</p>
+          <div class="row">
+            <button id="like-button" [ngClass]="newPost.hasLiked ? 'liked' : 'post-buttons-like'" type="button"
+                    class="btn btn-primary " (click)="postLike(newPost.id)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
+                   viewBox="0 0 16 16">
+                <path
+                  d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+              </svg>
+              {{likesUpdated ? newPostReturn.totalLikes : newPost.totalLikes}} Like
+            </button>
+            <button [routerLink]="['/user', newPost.domainName, newPost.id]" type="button"
+                    class="btn btn-primary post-buttons-comments">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-text"
+                   viewBox="0 0 16 16">
+                <path
+                  d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                <path
+                  d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+              {{newPost.totalComments}} Comment
+            </button>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="domainPosts.length">
+        <div *ngFor="let posts of domainPosts" class="card posts-cards">
+          <div class="card-body">
+            <a [routerLink]="['/user', posts.domainName, posts.id]"><h3 style="font-weight: bold;">{{posts.title}}</h3>
+            </a>
+            <p>{{posts.body}}</p>
+            <p>{{posts.createdAt | date:'dd-MMM-yyyy HH:mm'}}</p>
+            <div class="row">
+              <button id="old-like-button" [ngClass]="posts.hasLiked ? 'liked' : 'post-buttons-like'" type="button"
+                      class="btn btn-primary " (click)="postLike(posts.id)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
+                     viewBox="0 0 16 16">
+                  <path
+                    d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                </svg>
+                {{likesUpdated ? newPostReturn.totalLikes : posts.totalLikes}} Like
+              </button>
+              <button [routerLink]="['/user', posts.domainName, posts.id]" type="button"
+                      class="btn btn-primary post-buttons-comments">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-card-text" viewBox="0 0 16 16">
+                  <path
+                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                  <path
+                    d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+                {{posts.totalComments}} Comment
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card content-cards">
+        <div class="card-body">
+          <h3 class="domainstats-header">Domain Stats</h3>
+          <p class="domain-stats">Posts: {{postsLength}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

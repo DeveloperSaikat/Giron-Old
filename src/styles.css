@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    background-image: url(/assets/home-rush.png);
+    object-fit: fill;
+    background-repeat: repeat-y;
+    background-size: 100%;
+}
+
+.card{
+    box-shadow: 0 0 20px -5px;
+    animation-duration: .5s;
+    animation-name: slideIn;
+    animation-fill-mode: forwards;
+    transition: transform .5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-200px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}

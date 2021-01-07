@@ -1,0 +1,51 @@
+.user-header{
+    font-weight: bold;
+    color: rgb(42, 42, 248);
+    margin-bottom: 5%;
+    text-decoration: underline;
+}
+
+.card{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    box-shadow: 0 0 20px -5px;
+}
+
+/*
+.move-left{
+    width: 30px;
+    height: 30px;
+}
+
+.admin-section{
+    margin-left: 8px;
+}
+
+.admin-check{
+    margin-right: 30px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}*/
+
+.domain-img{
+    content: url(/assets/signup.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    margin-left: 15%;
+    width: 80%;
+    margin-top: 5%;
+}
+
+.field-error{
+    border: 1px solid red;
+}
+
+
+
+
+@media (max-width: 576px){
+    .domain-img{
+        margin-left: 0%;
+        width: 100%;
+    }
+}

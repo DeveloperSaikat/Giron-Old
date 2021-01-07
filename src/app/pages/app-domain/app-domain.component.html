@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="card login-card col-md-10 offset-md-1">
+    <div class="card-body">
+      <div class="col-md-10 offset-md-1">
+        <h3>Start your discussion...</h3>
+        <div *ngFor='let names of allDomainNames' class="card domain-cards">
+          <div class="card-body domain-card-body">
+            <div class="col-md-3">
+              <div class="alert alert-danger" role="alert">
+                {{names.name | uppercase}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

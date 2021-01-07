@@ -1,0 +1,102 @@
+<div class="container">
+  <div class="col-md-10 offset-md-1">
+    <div class="card posts-cards">
+      <div class="card-body">
+        <h3>Change Password</h3>
+        <form #createNewPassword="ngForm" (ngSubmit)="changePassword(createNewPassword)">
+          <div class="form-group">
+            <label for="oldPassword">Current Password</label>
+            <input type="password" class="form-control" id="oldPassword" name="oldPassword"
+                   [(ngModel)]="passwordDetails.currentPassword" required>
+          </div>
+          <div class="form-group">
+            <label for="newPassword">New Password</label>
+            <input type="password" class="form-control" id="newPassword" name="newPassword"
+                   [(ngModel)]="passwordDetails.newPassword" required>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                   [(ngModel)]="confirmPassword" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <!--
+        <input id="title" name="title" class="form-control" [(ngModel)]="passwordDetails.currentPassword" type="password" placeholder="Your current password" required>
+        <br>
+        <input id="body" name="body" class="form-control" [(ngModel)]="passwordDetails.newPassword" type="password" placeholder="Your new password" required>
+        <br>
+        <button type="button" class="btn btn-primary" (click)="changePassword()">Post</button>-->
+      </div>
+    </div>
+  </div>
+  <!-- <div class="col-md-4">
+       <div class="card img-card">
+           <img src="../assets/study.png" class="card-img-top" alt="...">
+           <div class="card-body">
+           </div>
+       </div>
+   </div>-->
+  <div class="col-md-10 offset-md-1">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-10">
+            <p *ngIf="!twoFactorEnabled">You don't have 2FA enabled. Want to add? </p>
+            <p *ngIf="twoFactorEnabled">You have 2FA enabled. Care to remove? </p>
+          </div>
+          <div class="col-md-2">
+            <button *ngIf="!twoFactorEnabled" type="button" class="btn btn-primary" (click)="enable2fa()">Enable
+            </button>
+            <button *ngIf="twoFactorEnabled" type="button" class="btn btn-primary" (click)="enable2fa()">Disable
+            </button>
+          </div>
+          <br><br>
+        </div>
+        <div *ngIf="qrcodeGenerated">
+          <div class="row">
+            <div class="col-md-8">
+              <p>Scan the QR from your TOTP app and then fill the following details:</p>
+              <form #create2FA="ngForm" (ngSubmit)="getRecoveryCodes(create2FA)">
+                <div class="form-group">
+                  <label for="currentPassword">Current Password</label>
+                  <input type="password" class="form-control" id="currentPassword" name="currentPassword"
+                         [(ngModel)]="twoFactorRequirements.password" required>
+                </div>
+                <div class="form-group">
+                  <label for="totpToken">Token</label>
+                  <input type="number" class="form-control" id="totpToken" name="totpToken"
+                    maxlength="6"  [(ngModel)]="twoFactorRequirements.token" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Get Codes</button>
+              </form>
+              <!--
+              <input id="password" name="password" class="form-control" [(ngModel)]="twoFactorRequirements.password"
+                     type="password" placeholder="Your current password" required>
+              <br>
+              <input id="token" name="token" class="form-control" [(ngModel)]="twoFactorRequirements.token"
+                     type="number" placeholder="Your new password" required>
+              <br>
+              <button type="button" class="btn btn-primary" (click)="getRecoveryCodes()">Post</button>
+              -->
+              <br><br>
+              <div *ngIf="recoveryCodes.length">
+                <div *ngFor="let codes of recoveryCodes">
+                  <div class="col-md-4">
+                    <div class="alert alert-success" role="alert">
+                      {{codes}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <qrcode class="qrcode" [qrdata]="qrString" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

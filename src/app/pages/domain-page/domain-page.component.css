@@ -1,0 +1,38 @@
+.alert{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    animation-duration: .5s;
+    animation-name: slideIn;
+    animation-fill-mode: forwards;
+    transition: transform .5s ease;
+}
+
+.page-headers{
+    font-weight: bold;
+}
+
+.card{
+    margin-top: 10%;
+}
+
+.card-text{
+    font-size: large;
+}
+
+.domain-img{
+    content: url(/assets/domain-name.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    margin-left: 15%;
+    width: 80%;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-200px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}

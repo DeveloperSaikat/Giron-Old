@@ -1,0 +1,37 @@
+.login-card{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    box-shadow: 0 0 20px -5px;
+}
+
+h3{
+    font-weight: 600;
+    color: rgb(42, 42, 248);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h5{
+    text-align: center;
+    font-weight: 600;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: gray;
+}
+
+
+.domain-img{
+    content: url(/assets/login.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    margin-left: 15%;
+    width: 90%;
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-200px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}

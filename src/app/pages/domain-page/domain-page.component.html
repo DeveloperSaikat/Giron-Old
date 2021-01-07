@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="card col-md-10 offset-md-1">
+        <div class="card-body">
+            <h3 class="page-headers">Domain Form</h3><br>
+            <div class="row">
+                <form class="col-md-6" #createDomain="ngForm" (ngSubmit)="submit(createDomain)">
+                    <div class="form-group">
+                        <label for="yourDomainName">Domain Name</label>
+                        <input type="text" class="form-control" id="yourDomainName" name="yourDomainName" ngModel required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <br><br>
+                    <p class="card-text">A domian is a discusion forum specific to some topic. Give a name to your discussion forum. It can be anything. Spread the word about your community so that others also know about it. Make engaging posts and 
+                        be active...
+                    </p>
+                </form>
+                
+               <!-- <div class="col-md-6">
+                    <h3 class="page-headers">Domain Name</h3>
+                    <input id="DomainName" name="DomainName" class="form-control" [(ngModel)]="domain.name" type="text" placeholder="Enter Domain Name" required>
+                    <br>
+                    <button type="button" class="btn btn-primary" (click)="submit()">Create</button>
+                    <br><br>
+                    <h4 class="page-headers">What is a Domain?</h4>
+                    <p class="card-text">A domian is a discusion forum specific to some topic. Give a name to your discussion forum. It can be anything. Spread the word about your community so that others also know about it. Make engaging posts and 
+                        be active...
+                    </p>
+                </div>-->
+                <div class="col-md-6">
+                    <div class="domain-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  
