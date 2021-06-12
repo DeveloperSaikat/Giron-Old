@@ -5,7 +5,7 @@ Create your community a.k.a domains, share it among your peers and start your ow
 
 ![landing_page](https://user-images.githubusercontent.com/40135714/121778810-4fe7a680-cbb6-11eb-8ab5-b054241326bd.png)
 
-Let me walk you through the pages (well not every page :P)
+Let me walk you through the pages (well not every page :smirk:)
 
 
 ## Login Page
