@@ -1,4 +1,4 @@
-# GironApp
+# GironApp :memo:
 
 A privacy focused discussion forum where users can build their own community.
 Create your community a.k.a domains, share it among your peers and start your own maintained discussion forum.
