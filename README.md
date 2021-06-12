@@ -1,6 +1,10 @@
 # GironApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
+A privacy focused discussion forum where users can build their own community.
+Create your community a.k.a domains, share it among your peers and start your own maintained discussion forum.
+
+![landing_page](https://user-images.githubusercontent.com/40135714/121778810-4fe7a680-cbb6-11eb-8ab5-b054241326bd.png)
+
 
 ## Development server
 
