@@ -33,13 +33,12 @@ This is the page where you create your next revolutionary invention, your own co
 
 Your newly created page will comprise of all the posts made by you and other users. Here you can like any post, comment any post and... Well we are working on the share feature by building our own link shortener.
 
-![account_page](https://user-images.githubusercontent.com/40135714/121779321-a7871180-cbb8-11eb-898e-6ef55e0eeb8d.png)
-
-
 ![domain_page](https://user-images.githubusercontent.com/40135714/121779219-4f500f80-cbb8-11eb-97a5-1ad552e2acef.png)
 
 
 ## Account Settings
 
 We all have a habit of getting paranoid about our passwords. In a way that's good actually because that will force you to change it. So, this is the page that lets you do that and guess what we also have added TOTP 2FA for more security.
+
+![account_page](https://user-images.githubusercontent.com/40135714/121779321-a7871180-cbb8-11eb-898e-6ef55e0eeb8d.png)
 
