@@ -5,27 +5,41 @@ Create your community a.k.a domains, share it among your peers and start your ow
 
 ![landing_page](https://user-images.githubusercontent.com/40135714/121778810-4fe7a680-cbb6-11eb-8ab5-b054241326bd.png)
 
+Let me walk you through the pages (well not every page :P)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Login Page
 
-## Code scaffolding
+As I said earlier we are privacy focussed, thus we only require username and password
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![login](https://user-images.githubusercontent.com/40135714/121778965-09467c00-cbb7-11eb-96fa-08d62e261da1.png)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## User Landing 
 
-## Running unit tests
+Recenty created communities show up at the timeline when you login. That's our way of uplifting communities. However if you are looking for any specific community then no worries we have the search facility as well.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![user_landing](https://user-images.githubusercontent.com/40135714/121779122-bc16da00-cbb7-11eb-8fb0-fe53711f3bc8.png)
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Domain Creation
 
-## Further help
+This is the page where you create your next revolutionary invention, your own community.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![create_domain](https://user-images.githubusercontent.com/40135714/121779162-eff1ff80-cbb7-11eb-9643-105b14b6b49d.png)
+
+
+## Domain Page
+
+Your newly created page will comprise of all the posts made by you and other users. Here you can like any post, comment any post and... Well we are working on the share feature by building our own link shortener.
+
+![account_page](https://user-images.githubusercontent.com/40135714/121779321-a7871180-cbb8-11eb-898e-6ef55e0eeb8d.png)
+
+
+![domain_page](https://user-images.githubusercontent.com/40135714/121779219-4f500f80-cbb8-11eb-97a5-1ad552e2acef.png)
+
+
+## Account Settings
+
+We all have a habit of getting paranoid about our passwords. In a way that's good actually because that will force you to change it. So, this is the page that lets you do that and guess what we also have added TOTP 2FA for more security.
+
